@@ -1,12 +1,12 @@
 use std::{
     env,
-    ffi::{c_int, c_long},
+    ffi::{c_int, c_longlong},
 };
 
 #[link(name = ":newplus/libnewplus.so")]
 extern "C" {
     fn plusone(x: c_int) -> c_int;
-    fn current_timestamp() -> c_long;
+    fn current_timestamp() -> c_longlong;
 }
 
 fn run(count: c_int) {
